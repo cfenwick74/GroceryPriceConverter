@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fenwick.priceconverter.MainActivity">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--tools:layout_editor_absoluteX="8dp"-->
+        <!--tools:layout_editor_absoluteY="8dp">-->
+
+
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/kgLabel"
+        android:layout_width="152dp"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:text="@string/kiloLabel" />
+
+    <EditText
+        android:id="@+id/kgText"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number|numberDecimal"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/poundLabel"
+        android:layout_width="152dp"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:text="@string/poundLabel"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/kgText"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/poundText"
+        android:digits="0123456789"
+        android:layout_width="208dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number|numberDecimal"
+        tools:layout_editor_absoluteY="17dp"
+        android:layout_alignTop="@+id/poundLabel"
+        android:layout_alignStart="@+id/kgText" />
+
+
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="152dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:text="@string/result"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/convertBtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="208dp"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/convertBtn"
+        android:layout_alignStart="@+id/poundText" />
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/poundLabel"
+        android:layout_marginTop="11dp"
+        android:onClick="onConvertClicked"
+        android:text="@string/convert" />
+
+    <Button
+        android:id="@id/resetBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onResetClicked"
+        android:layout_below="@id/result"
+        android:text="@string/reset" />
+
+</RelativeLayout>

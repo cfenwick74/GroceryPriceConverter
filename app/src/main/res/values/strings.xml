@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Grocery Price Converter</string>
+    <string name="poundLabel">Enter price per pound:</string>
+    <string name="convert">CONVERT</string>
+    <string name="kiloLabel">Enter price per kilo:</string>
+    <string name="reset">RESET</string>
+    <string name="result">Conversion result:</string>
+</resources>
